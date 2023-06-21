@@ -1,11 +1,39 @@
 ---
+import { Icon } from "astro-icon";
+
+let navLinks = [
+    { text: "Home", url: "/" },
+    { text: "About", url: "/about/" },
+    { text: "Blog", url: "/blog/" },
+    { text: "Tags", url: "/tags/" },
+    { text: "Resume", url: "/resume/" },
+    { text: "Projects", url: "/projects/" },
+];
 ---
 
-<div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/tags/">Tags</a>
-    <a href="/resume/">Resume</a>
-    <a href="/projects/">Projects</a>
+<div
+    class="flex flex-col items-center justify-between sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 pb-6"
+>
+    <div
+        class="flex flex-col items-center sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
+    >
+        {
+            navLinks.map((link) => (
+                <a href={link.url}>
+                    <span class="text-main-blue">
+                        {link.text}
+                    </span>
+                </a>
+            ))
+        }
+    </div>
+    <div
+        class="flex flex-row space-x-2 sm:space-x-0 sm:space-y-0"
+    >
+        <Icon name="mdi:github" class="h-8 text-main-blue align-middle" />
+        <Icon
+            name="mdi:twitter-circle"
+            class="h-8 text-main-blue align-middle"
+        />
+    </div>
 </div>

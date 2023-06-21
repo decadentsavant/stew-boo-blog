@@ -3,16 +3,16 @@ import Navigation from "./Navigation.astro";
 import { Icon } from "astro-icon";
 ---
 
-<header>
-    <nav>
+<header class="w-full">
+    <nav class="w-full">
         <div class="sm:hidden" id="hamburger-icon">
-            <Icon name="ci:hamburger" class="h-6" />
+            <Icon name="ci:hamburger" class="h-6 text-main-purple mb-3" />
         </div>
         <div class="hidden sm:block text-center" id="navigation-menu">
             <Navigation />
         </div>
     </nav>
     <script>
-    import "../scripts/menu.js"; 
+        import "../scripts/menu.js";
     </script>
 </header>
