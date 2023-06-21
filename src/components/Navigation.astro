@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import SocialIcon from "./SocialIcon.astro";
 
 let navLinks = [
     { text: "Home", url: "/" },
@@ -19,21 +20,19 @@ let navLinks = [
     >
         {
             navLinks.map((link) => (
-                <a href={link.url}>
-                    <span class="text-main-blue">
-                        {link.text}
-                    </span>
+                <a href={link.url} class="nav-link">
+                    <span class="text-main-blue">{link.text}</span>
                 </a>
             ))
         }
     </div>
-    <div
-        class="flex flex-row space-x-2 sm:space-x-0 sm:space-y-0"
-    >
-        <Icon name="mdi:github" class="h-8 text-main-blue align-middle" />
-        <Icon
-            name="mdi:twitter-circle"
-            class="h-8 text-main-blue align-middle"
-        />
+    <div class="flex flex-row space-x-2 sm:space-x-0 sm:space-y-0">
+        <SocialIcon name="mdi:github" link="https://github.com/decadentsavant" />
+        <SocialIcon name="mdi:twitter" link="https://twitter.com/decadentsavant" />
     </div>
 </div>
+
+<script>
+    import "../scripts/underlineNav.js"
+</script>
+ 
