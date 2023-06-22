@@ -1,65 +1,111 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "About Me";
-
-const identity = {
-	firstName: "Sarah",
-	country: "Canada",
-	occupation: "Technical Writer",
-	hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = true;
-const goal = 3;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Corey Stewart";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-		<h2>... and my new Astro site!</h2>
+	<h2 class="py-4 italic text-2xl text-center text-text-cream">
+		I'm seeking to learn more, do more, and be more.<br />But first I'm
+		seeking coffee.
+	</h2>
 
-		<p>
-			I am working through Astro's introductory tutorial. This is the
-			second page on my website, and it's the first one I built myself!
-		</p>
+	<h3 class="py-4 font-bold">Professional Biography - short version</h3>
 
-		<p>
-			This site will update as I complete more of the tutorial, so keep
-			checking back and see how my journey is going!
-		</p>o<p>Here are a few facts about me:</p>
-		<ul>
-			<li>My name is {identity.firstName}.</li>
-			<li>
-				I live in {identity.country} and I work as a {
-					identity.occupation
-				}.
-			</li>
-			{
-				identity.hobbies.length >= 2 && (
-					<li>
-						Two of my hobbies are: {identity.hobbies[0]} and{" "}
-						{identity.hobbies[1]}
-					</li>
-				)
-			}
-		</ul>
-		<p>My skills are:</p>
-		<ul>
-			{skills.map((skill) => <li class="skill">{skill}</li>)}
-		</ul>
-		{happy && <p>I am happy to be learning Astro!</p>}
+	<p>
+		Corey Stewart is a Director of Operations at International Coaching
+		Federation (ICF). Internally, he's responsible for ensuring the
+		continuity of day-to-day operations. Externally, he helps international
+		organizations of Fortune sizes build, scale, and refine their internal
+		coaching programs. Before devoting his work to ICF, Corey led
+		Organizational Development & Talent Management intiatives for GAF.
+	</p>
 
-		{finished && <p>I finished this tutorial!</p>}
+	<h3 class="py-4 font-bold">Personal Biography - fun version</h3>
 
-		{
-			goal === 3 ? (
-				<p>My goal is to finish in 3 days.</p>
-			) : (
-				<p>My goal is not 3 days.</p>
-			)
-		}
-		</BaseLayout>
+	<p>
+		Alright folks, gather round. Here's the tale of Corey Stewart. He grows
+		up under the Texas sun as a Gen X'er, raised on BBQ, Nirvana, and Saved
+		by the Bell. He excels academically, but is painfully shy. He'd have
+		preferred a tax audit to a conversation.
+	</p>
+
+	<p>
+		So at 18, off he goes to the University of Texas - Arlington on a full
+		academic scholarship in pursuit of an accounting degree. In a deliberate
+		attempt to overcome shyness he forces himself to join a fraternity,
+		sells Dish Netowrk door-to-door, and takes up rock climbing. Yes, rock
+		climbing! A real social butterfly, that one.
+	</p>
+
+	<p>
+		Post-college, he goes for a job interview in a shipping department, but
+		the HR folks like him so much they ask him to join their team instead.
+		He takes them up on the offer. Eventually, they ask him to move from
+		Texas to Vegas, baby, to head up the HR department as they build a new
+		500,000 sq. ft. manufacturing facility. He starts as employee number
+		five and before you know it, he brings in 100+ more employees despite
+		being in over his head 14 hours a day, every day.
+	</p>
+
+	<p>
+		Simultaneously, he's a nightclub photographer taking photos of party
+		people and celebrities. His 14 hour days turn into 18 hour days, he
+		sleeps in the back of his truck a lot, and he's not sure if he's coming
+		or going. One night he takes a photo so hot, it crashes an ESPN server
+		during the MLB steroid debalce. Talk about a Kodak moment.
+	</p>
+
+	<p>
+		He misses his home state, so he returns to Texas for over a decade's
+		worth of work at GAF in HR, Organizational Development, and Talent
+		Management. The early half of his tenure has more action that a Tom
+		Cruise movie. He experiences more as an HR professional will in two
+		lifetime. Some aspects were fun...mergers & acquisitions, subsequently
+		creating and centralizing processes such as Performance Mangement and
+		Learning & Development, and steering company-wide annual capability
+		reviews. Yes, that's fun to him. Some of it wasn't so fun - union
+		negotiaitons and arbitrations, testifying in federal court, and taking
+		injured employees to the hospital at 4am.
+	</p>
+
+	<p>
+		Amidst the chaos, he's taking annual sailing trips with friends. They
+		keep asking him to join them, but he's scared of leaving the security of
+		a steady paycheck so he repeatedly declines. Until he says yes.
+	</p>
+
+	<p>
+		He sells everything and moves onto a 52' sailboat in Florida with two
+		dufflebags of clothes. They set sail for a 12 month adventrue across
+		Georgia, Florida, the Bahamas, Turks & Caicos, and the Dominican
+		Republic. He learns to sail a little better, spearfish, cook lobster,
+		ride a motorcycle on some pretty questionable roads, and tie up a boat
+		before a hurricane.
+	</p>
+
+	<p>
+		When the sailing journey comes to an he spends 2 more years flying to
+		various parts of the world. He hikes a 14'er, walks across the country
+		of Spain, and runs a couple half marathons - he's like an Energizer
+		bunny on steroids, but has narcolepsy too.
+	</p>
+
+	<p>
+		He also discovers that he wants to retire in Portugal on the island of
+		Maderia. Let him know if you have an "in" there.
+	</p>
+
+	<p>
+		Freelancing as a photographer and video editor for a New Zealand fresh
+		produce company finally comes to an end when he decides to go back to
+		work in February of 2020. Obviously, this timing is not ideal.
+	</p>
+
+	<p>
+		Fortunately, he lands at the International Coaching Federation where
+		he's working as of this writing. Nowadays, you'll find him walking his
+		dog, teaching himself software development, and fishing for largemouth
+		bass. He's splitting his time between Texas and NYC. Because hey,
+		variety is the spice of life, right?
+	</p>
+</BaseLayout>

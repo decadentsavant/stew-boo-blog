@@ -16,7 +16,7 @@ const { pageTitle } = Astro.props;
   <body>
     <div class="site-wrapper">
       <Header />
-      <h1 class="text-4xl font-bold">
+      <h1 class="text-xl font-bold">
         <span
           style="background: linear-gradient(to right, rgb(89, 203, 230), rgb(90, 118, 186)); -webkit-background-clip: text; color: transparent;"
         >
@@ -26,5 +26,9 @@ const { pageTitle } = Astro.props;
       <slot />
       <Footer />
     </div>
+  <img 
+    src="../../boo_icon-180.png"
+    class="fixed right-2 bottom-2 h-8 sm:h-10 rounded-full bg-transparent"
+  />
   </body>
 </html>

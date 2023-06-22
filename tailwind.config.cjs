@@ -8,6 +8,7 @@ module.exports = {
             colors: {
                 "main-blue": "rgb(89, 203, 230)",
                 "main-purple": "rgb(90, 118, 186)",
+                "text-cream": "rgb(194,178,150)",
             },
         },
     },
