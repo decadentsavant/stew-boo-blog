@@ -1,111 +1,198 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import headshot from "../../headshot_small.png";
+import lobsters from "../../lobsters.png";
+
 const pageTitle = "Corey Stewart";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2 class="py-4 italic text-2xl text-center text-text-cream">
+	<h2 class="pt-8 pb-8 italic text-2xl text-center text-text-cream">
 		I'm seeking to learn more, do more, and be more.<br />But first I'm
 		seeking coffee.
 	</h2>
 
-	<h3 class="py-4 font-bold">Professional Biography - short version</h3>
+	<img
+		src={headshot}
+		alt="Description of Image 1"
+		class="w-full sm:w-2/5 sm:float-left sm:mr-4"
+	/>
+
+	<h3 class="font-bold py-4 sm:pt-0 sm:pb-4">
+		Professional Biography - short <span class="italic">corporatey</span> version
+	</h3>
 
 	<p>
 		Corey Stewart is a Director of Operations at International Coaching
-		Federation (ICF). Internally, he's responsible for ensuring the
-		continuity of day-to-day operations. Externally, he helps international
-		organizations of Fortune sizes build, scale, and refine their internal
-		coaching programs. Before devoting his work to ICF, Corey led
-		Organizational Development & Talent Management intiatives for GAF.
+		Federation (ICF). 
 	</p>
+	<p>
+		He was asked to come aboard to launch the internal startup of
+		Coaching in Organizations at the globally recognized International
+		Coaching Federation (ICF). He currently serves as its Director of
+		Operations.
+	</p>
+	<p>
+		Internally, Corey is the driving force behind seamless continuity of
+		day-to-day functions, ensuring that each cog in the organizational wheel
+		spins without a hitch.
+	</p>
+	<p>
+		Externally, he employs his strategic acumen to help guide international
+		enterprises of Fortune caliber, facilitating them in constructing,
+		scaling, and fine-tuning their in-house coaching programs.
+	</p>
+	<p>
+		Prior to his impactful commitment to ICF, Corey exhibited outstanding
+		leadership as he spearheaded Organizational Development and Talent
+		Management initiatives at GAF. His adeptness in these areas continues to
+		fuel his success and enrich his contributions to the world of corporate
+		coaching and talent management.
+	</p>
+	<hr class="border-t border-main-blue mx-4 mt-4 mb-12" />
 
-	<h3 class="py-4 font-bold">Personal Biography - fun version</h3>
+	<img
+		src={lobsters}
+		alt="Description of Image 1"
+		class="w-full sm:w-2/5 sm:float-left sm:mr-4"
+	/>
+	<h3 class="font-bold py-4 sm:pt-0 sm:pb-4">
+		Personal Biography - long fun version
+	</h3>
 
 	<p>
-		Alright folks, gather round. Here's the tale of Corey Stewart. He grows
-		up under the Texas sun as a Gen X'er, raised on BBQ, Nirvana, and Saved
-		by the Bell. He excels academically, but is painfully shy. He'd have
-		preferred a tax audit to a conversation.
+		Alright folks, gather round and lets chew the fat about one Corey
+		Stewart, our resident lifetime learner and action enthusiast.
+	</p>
+
+	<p>
+		He emerges from the Texas sun as a classic Gen X'er, nourished on a
+		balanced diet of BBQ, Nirvana, and life lessons from Saved by the Bell.
+		He excels academically, but is painfully shy. He's an Einstein at
+		school, but so shy he'd rather tackle a tax audit than a trivial chat.
 	</p>
 
 	<p>
 		So at 18, off he goes to the University of Texas - Arlington on a full
-		academic scholarship in pursuit of an accounting degree. In a deliberate
-		attempt to overcome shyness he forces himself to join a fraternity,
-		sells Dish Netowrk door-to-door, and takes up rock climbing. Yes, rock
-		climbing! A real social butterfly, that one.
+		academic scholarship in pursuit of an accounting degree. And here's
+		where our tale of constant learning and action begins...
 	</p>
 
 	<p>
-		Post-college, he goes for a job interview in a shipping department, but
-		the HR folks like him so much they ask him to join their team instead.
-		He takes them up on the offer. Eventually, they ask him to move from
-		Texas to Vegas, baby, to head up the HR department as they build a new
-		500,000 sq. ft. manufacturing facility. He starts as employee number
-		five and before you know it, he brings in 100+ more employees despite
-		being in over his head 14 hours a day, every day.
+		To shake off his shyness, he forces himself to peddle Dish Netowrk
+		door-to-door, joins a fraternity, and takes up rock climbing. Yes, rock
+		climbing. A real social butterfly, that one.
 	</p>
 
 	<p>
-		Simultaneously, he's a nightclub photographer taking photos of party
-		people and celebrities. His 14 hour days turn into 18 hour days, he
-		sleeps in the back of his truck a lot, and he's not sure if he's coming
-		or going. One night he takes a photo so hot, it crashes an ESPN server
-		during the MLB steroid debalce. Talk about a Kodak moment.
+		Post-college, he takes a swing at a job in in logistics, but the HR team
+		swoons over his charisma and asks him to join their team instead. He
+		takes them up on the offer.
 	</p>
 
 	<p>
-		He misses his home state, so he returns to Texas for over a decade's
-		worth of work at GAF in HR, Organizational Development, and Talent
-		Management. The early half of his tenure has more action that a Tom
-		Cruise movie. He experiences more as an HR professional will in two
-		lifetime. Some aspects were fun...mergers & acquisitions, subsequently
-		creating and centralizing processes such as Performance Mangement and
-		Learning & Development, and steering company-wide annual capability
-		reviews. Yes, that's fun to him. Some of it wasn't so fun - union
-		negotiaitons and arbitrations, testifying in federal court, and taking
-		injured employees to the hospital at 4am.
+		Within a couple years, they ask him to move from Texas to <span
+			class="italic font-bold">"Vegas, baby!"</span
+		> to head up the HR department as they build a new 500,000 sq. ft. manufacturing
+		facility. He starts as employee number five and before you know it, he brings
+		in 100+ more employees.
 	</p>
 
 	<p>
-		Amidst the chaos, he's taking annual sailing trips with friends. They
-		keep asking him to join them, but he's scared of leaving the security of
-		a steady paycheck so he repeatedly declines. Until he says yes.
+		He's working 14 hour days and napping in his truck at lunch, but he
+		learns, adapts, and thrives. And he's young.
+	</p>
+
+	<p>
+		While juggling the HR gig, he begins moonlighting as a nightclub
+		photographer, giving Vegas' party animals their 15 minutes of fame. His
+		14 hour days turn into 18 hour days, and he's not sure if he's coming or
+		going.
+	</p>
+
+	<p>
+		One night he takes a fiery photo and it crashes an ESPN server during
+		the MLB steroid debalce. Talk about a Kodak moment.
+	</p>
+
+	<p>
+		Eventually, the Lone Star state calls him home, and Corey clocks a
+		decade at GAF. He dives deep into the headlong depths of HR,
+		Organizational Development, and Talent Management.
+	</p>
+
+	<p>
+		Some aspects are fun...such as mergers & acquisitions, subsequently
+		creating and centralizing Performance Mangement and Learning &
+		Development processes, and steering company-wide annual capability
+		reviews.
+	</p>
+
+	<p>Yes, that's fun to him.</p>
+
+	<p>
+		Some of it wasn't so fun - union negotiaitons and arbitrations,
+		testifying in federal court, and taking injured employees to the
+		hospital at 4am.
+	</p>
+
+	<p>
+		He experiences more as an HR / Talent Management / Organziational
+		Development professional than most will in two lifetimes. His life is a
+		rollercoaster of adrenaline - it's like being in a Tom Cruise flick, but
+		with less CGI and more paperwork.
+	</p>
+
+	<p>
+		Amidst the chaos, he's taking annual sailing trips with friends learning
+		to sail. They want to live on a boat someday and keep asking him to join
+		them, but he's scared of abandoning the security of a steady paycheck
+		behind so he says no. Until the day he says yes.
 	</p>
 
 	<p>
 		He sells everything and moves onto a 52' sailboat in Florida with two
 		dufflebags of clothes. They set sail for a 12 month adventrue across
 		Georgia, Florida, the Bahamas, Turks & Caicos, and the Dominican
-		Republic. He learns to sail a little better, spearfish, cook lobster,
-		ride a motorcycle on some pretty questionable roads, and tie up a boat
-		before a hurricane.
+		Republic.
 	</p>
 
 	<p>
-		When the sailing journey comes to an he spends 2 more years flying to
-		various parts of the world. He hikes a 14'er, walks across the country
-		of Spain, and runs a couple half marathons - he's like an Energizer
-		bunny on steroids, but has narcolepsy too.
+		It's an education you can't find in any classroom or corporate
+		boardroom. He learns to sail a little more, spearfish, cook lobster,
+		ride a motorcycle on some pretty questionable roads, and hurricane prep
+		a boat...for two hurricanes.
 	</p>
 
 	<p>
-		He also discovers that he wants to retire in Portugal on the island of
-		Maderia. Let him know if you have an "in" there.
+		Post-sailing, Corey sprouts wings and flies around the globe for 2 more
+		years. He hikes a 14'er, walks across the country of Spain, and runs a
+		couple half marathons - he's like an Energizer bunny on steroids, but
+		has narcolepsy too.
 	</p>
 
 	<p>
-		Freelancing as a photographer and video editor for a New Zealand fresh
-		produce company finally comes to an end when he decides to go back to
-		work in February of 2020. Obviously, this timing is not ideal.
+		He also marks Maderia, Portugal as his future retirement haven - or
+		sooner if the opportunity affords itself. If you've got an "in" there,
+		he's all ears.
+	</p>
+
+	<p>
+		Freelancing all along as a photographer and video editor for a New
+		Zealand fresh produce company finally comes to an end when he decides to
+		go back to work in February of 2020. Obviously, this timing is not
+		ideal.
 	</p>
 
 	<p>
 		Fortunately, he lands at the International Coaching Federation where
-		he's working as of this writing. Nowadays, you'll find him walking his
-		dog, teaching himself software development, and fishing for largemouth
-		bass. He's splitting his time between Texas and NYC. Because hey,
-		variety is the spice of life, right?
+		he's working as of this writing.
+	</p>
+
+	<p>
+		Presently, you can spot him teaching himself software development,
+		walking his dog, and casting lines for largemouth bass, splitting his
+		time between Texas and NYC. Because hey, life is a buffet, why not
+		sample everything?
 	</p>
 </BaseLayout>
