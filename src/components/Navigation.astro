@@ -3,7 +3,7 @@ import { Icon } from "astro-icon";
 import SocialIcon from "./SocialIcon.astro";
 
 let navLinks = [
-    { text: "Home", url: "/" },
+    { text: "Stew.Boo", url: "/" },
     { text: "About", url: "/about/" },
     { text: "Blog", url: "/blog/" },
     { text: "Tags", url: "/tags/" },
@@ -19,20 +19,36 @@ let navLinks = [
         class="flex flex-col items-center sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
     >
         {
-            navLinks.map((link) => (
-                <a href={link.url} class="nav-link">
-                    <span class="text-main-blue">{link.text}</span>
-                </a>
-            ))
+            navLinks.map((link) => {
+                let isActive = Astro.url.pathname === link.url;
+                let underlineClass = isActive ? 'border-b-2 border-blue-500' : 'border-b-0';
+                
+                return link.text === "Stew.Boo" ? (
+                    <a href={link.url} class={`text-xl nav-link no-underline ${underlineClass}`}>
+                        <span style="background: linear-gradient(to right, rgb(89, 203, 230), rgb(90, 118, 186)); -webkit-background-clip: text; color: transparent;">
+                            {link.text}
+                        </span>
+                    </a>
+                ) : (
+                    <a href={link.url} class={`nav-link no-underline ${underlineClass}`}>
+                        <span class="text-main-blue">{link.text}</span>
+                    </a>
+                )
+            })
         }
     </div>
     <div class="flex flex-row space-x-2 sm:space-x-0 sm:space-y-0">
-        <SocialIcon name="mdi:github" link="https://github.com/decadentsavant" />
-        <SocialIcon name="mdi:twitter" link="https://twitter.com/decadentsavant" />
+        <SocialIcon
+            name="mdi:github"
+            link="https://github.com/decadentsavant"
+        />
+        <SocialIcon
+            name="mdi:twitter"
+            link="https://twitter.com/decadentsavant"
+        />
     </div>
 </div>
 
 <script>
-    import "../scripts/underlineNav.js"
+    import "../scripts/underlineNav.js";
 </script>
- 
