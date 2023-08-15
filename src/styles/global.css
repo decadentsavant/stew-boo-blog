@@ -39,10 +39,23 @@ p {
     margin-right: auto;
     padding: 1rem;
     width: 100%;
+    display: flex;            /* Add this line */
+    flex-direction: column;   /* Add this line */
+    min-height: 100vh;   
 
     /* Responsive styles */
     @media (min-width: 1024px) {
         /* Tailwind lg */
         max-width: 1024px;
     }
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
 }
