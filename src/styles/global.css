@@ -12,7 +12,22 @@
 html {
     background-color: var(--main-bg-color);
     color: var(--text-cream);
+    overflow-y: scroll; /* always show scrollbar */
 }
+
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(89, 203, 230); /* Color of the scroll thumb */
+    border-radius:  10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Color of the track */
+}
+
 
 body {
     font-family: var(--main-font), sans-serif;
@@ -39,8 +54,8 @@ p {
     margin-right: auto;
     padding: 1rem;
     width: 100%;
-    display: flex;            /* Add this line */
-    flex-direction: column;   /* Add this line */
+    display: flex;           
+    flex-direction: column;   
     min-height: 100vh;   
 
     /* Responsive styles */
@@ -59,3 +74,15 @@ footer {
     gap: 1rem;
     margin-top: 2rem;
 }
+
+.img-container {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: top center; /* This sets the origin of the transformation to the top center of the element */
+}
+
+.img-container:hover {
+    transform: scale(1.1); /* Enlarges the entire container */
+    z-index: 1; /* Ensures that the enlarged container appears above surrounding elements */
+}
+
