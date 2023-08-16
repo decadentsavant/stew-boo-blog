@@ -1,18 +1,30 @@
 ---
 ---
 
-<style>
-    footer {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-</style>
-
-<footer>
+<footer class="flex mt-2">
     <p class="text-xs text-main-blue sm:h-4">© 2023 MostLearned LLC</p>
-    <img
-        src="../../boo_icon-180.png"
-        class="fixed right-2 bottom-2 h-8 sm:h-10 rounded-full bg-transparent"
-    />
+    <div class="fixed right-2 bottom-2 flex flex-col items-end" id="wrapper">
+        <div class="relative flex flex-col items-end">
+            <div
+                class="max-w-xs p-2 mr-9 bg-main-blue text-white rounded-tl-md rounded-tr-md rounded-bl-md opacity-0 transform translate-y-9 transition-all ease-in-out duration-300 z-10 whitespace-normal break-words"
+                id="chat-bubble"
+            >
+            Boo!
+            </div>
+            <img
+                src="../../boo_icon-180.png"
+                class="h-8 sm:h-10 rounded-full bg-transparent"
+            />
+        </div>
+    </div>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            document.getElementById("chat-bubble").style.opacity = ".95";
+            document.getElementById("chat-bubble").style.transform =
+                "translateY(0)";
+        }, 2000); // 2 seconds delay
+    });
+</script>
