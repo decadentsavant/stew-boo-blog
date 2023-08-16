@@ -1,29 +1,42 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const pageTitle = "Corey Stewart Resume"
+const pageTitle = "Corey Stewart Resume";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h1 class="pt-8 pb-8 italic text-2xl text-center text-text-cream">
+    <h1 class="pt-8 pb-8 italic text-3xl text-center text-text-cream">
         Resumes
     </h1>
-    <div class="flex flex-col justify-around items-center sm:flex-row sm:justify-between px-4 sm:px-0">
+    <div
+        class="flex flex-col justify-around items-center sm:flex-row sm:justify-around px-4 sm:px-0"
+    >
         <a href="../../CoreyStewartTalent.pdf" download>
             <div class="text-center">
-                <h2 class="text-xl text-text-cream inline-block">
-                    Technical Resume <span class="text-sm">(Coming Soon)</span>
+                <h2 class="text-2xl text-text-cream inline-block">
+                    Technical Resume <br><span class="text-sm">(Coming Soon)</span>
                 </h2>
-                <div class="inline-block transition-transform duration-300 ease-in-out transform origin-top-center hover:scale-110 m-2">
-                    <img src="../../resumeTalent.png" class="h-80 mx-auto" />
-                </div>
+            </div>
+            <div
+                class="inline-block transition-transform duration-300 ease-in-out transform origin-top-center hover:scale-110 m-2"
+            >
+                <img src="../../resumeTalent.png" class="h-80 mx-auto" />
             </div>
         </a>
         <a href="../../CoreyStewartTalent.pdf" download>
-            <h2 class="text-xl text-text-cream text-center">Talent Resume</h2>
-            <div class="inline-block transition-transform duration-300 ease-in-out transform origin-top-center hover:scale-110 m-2">
+            <h2 class="text-2xl text-text-cream text-center">Talent Resume<br>&nbsp</h2>
+            <div
+                class="inline-block transition-transform duration-300 ease-in-out transform origin-top-center hover:scale-110 m-2"
+            >
                 <img src="../../resumeTalent.png" class="h-80 mx-auto" />
             </div>
         </a>
     </div>
+    <p class="pt-12 italic text-text-cream">
+        "A human being should be able to change a diaper, plan an invasion,
+        butcher a hog, conn a ship, design a building, write a sonnet, balance
+        accounts, build a wall, set a bone, comfort the dying, take orders, give
+        orders, cooperate, act alone, solve equations, analyze a new problem,
+        pitch manure, program a computer, cook a tasty meal, fight efficiently,
+        die gallantly. Specialization is for insects." – Robert A. Heinlein
+    </p>
 </BaseLayout>
-
