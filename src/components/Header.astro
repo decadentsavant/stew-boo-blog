@@ -8,7 +8,7 @@ const { navTitle } = Astro.props;
     <nav class="w-full">
         <div class="flex justify-between sm:hidden mb-2" id="hamburger-icon">
             <Icon name="ci:hamburger" class="h-6 text-main-purple" />
-            <span class="absolute left-1/2 transform -translate-x-1/2" style="background: linear-gradient(to right, rgb(89, 203, 230), rgb(90, 118, 186)); -webkit-background-clip: text; color: transparent;">{navTitle}</span>
+            <span class="absolute left-1/2 -translate-x-1/2" style="background: linear-gradient(to right, rgb(89, 203, 230), rgb(90, 118, 186)); -webkit-background-clip: text; color: transparent;">{navTitle}</span>
         </div>
         <div class="hidden sm:block text-center" id="navigation-menu">
             <Navigation />

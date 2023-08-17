@@ -1,0 +1,16 @@
+---
+const { img, title, desc } = Astro.props;
+---
+
+<div class="flex flex-col max-w-lg rounded-lg bg-neutral-800">
+    <img class="object-cover h-72" src={img} alt="penguin under arch" />
+    <div class="flex flex-col justify-start p-6 bg-neutral-700 rounded-b-lg">
+        <h2 class="mb-2 text-xl font-medium text-neutral-50">
+            {title}
+        </h2>
+        <p class="mb-4 text-base text-neutral-50">
+            {desc}
+        </p>
+        <p class="text-xs text-neutral-500">Click to learn more</p>
+    </div>
+</div>

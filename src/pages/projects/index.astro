@@ -1,35 +1,37 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const pageTitle = "Co's Projects"
+import Card from "../../components/Card.astro";
+const pageTitle = "Co's Projects";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
     <h1 class="pt-8 pb-8 text-3xl text-center text-text-cream">
         Select Projects
     </h1>
-<div
-  class="block rounded-lg ">
-  <a href="#!">
-    <img
-      class="rounded-t-lg"
-      src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-      alt="" />
-  </a>
-  <div class="p-6">
-    <h5
-      class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-      Card title
-    </h5>
-    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-      Some quick example text to build on the card title and make up the
-      bulk of the card's content.
-    </p>
-    <button
-      type="button"
-      class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-      data-te-ripple-init
-      data-te-ripple-color="light">
-      Button
-    </button>
-  </div>
-</div>
+    <div class="flex flex-col items-center gap-5 lg:grid lg:grid-cols-2">
+        <Card
+            title="I use Arch, BTW"
+            desc="This site and all of the projects mentioned on this page are hosted on a custom Arch server. Email, web hosting, webhook processing capabilities, SSH, TLS/SSL..."
+            img="/images/arch_penguin.png"
+            alt="penguin under arch"
+        />
+        <Card
+            title="Baseball Junkie"
+            desc="Node.js application scrapes baseball statistics, writes to PostgreSQL database, crunches numbers, and sends daily email to a baseball card day trader..."
+            img="/images/baseball_cards.png"
+            alt="monkey with baseball cards"
+        />
+        <Card
+            title="You've Got Mail!"
+            desc="Postfix, Dovecot, Mutt, oh my! Fully functional mail server that complies with SPF, DKIM, DMARC, other other configurations that ensure maximum deliverability..."
+            img="/images/elon_musk_email.png"
+            alt="elon musk checking email"
+        />
+        <Card
+            title="Boo! (this site)"
+            desc="Astro, Tailwind CSS, and keyboard grease come together to deliver this snappy, responsive site through a custom built continuous deployment pipeline..."
+            img="/images/boo_icon.png"
+            alt="logo of ghost for stew.boo"
+        />
+    </div>
 </BaseLayout>

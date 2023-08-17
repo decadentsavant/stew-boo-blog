@@ -1,5 +1,9 @@
+# images...be sure to manually move
+public/images/
+
 # build output
 dist/
+
 # generated types
 .astro/
 
@@ -11,7 +15,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
 
 # environment variables
 .env
