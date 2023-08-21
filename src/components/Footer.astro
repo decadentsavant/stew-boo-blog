@@ -3,13 +3,16 @@
 
 <footer class="flex mt-2">
     <p class="text-xs text-main-blue sm:h-4">© 2023 MostLearned LLC</p>
-    <div class="fixed right-2 bottom-2 flex flex-col items-end opacity-0 translate-y-9 transition-all ease-in-out duration-300 z-10" id="wrapper">
+    <div
+        class="fixed right-2 bottom-2 flex flex-col items-end opacity-0 translate-y-9 transition-all ease-in-out duration-300 z-10"
+        id="wrapper"
+    >
         <div class="relative flex flex-col items-end">
             <div
                 class="max-w-xs p-2 mr-9 bg-main-blue text-white rounded-tl-md rounded-tr-md rounded-bl-md whitespace-normal break-words"
                 id="chat-bubble"
             >
-            Boo!
+                Boo!
             </div>
             <img
                 src="/images/boo_icon-180.png"
@@ -20,11 +23,5 @@
 </footer>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(() => {
-            document.getElementById("wrapper").style.opacity = ".95";
-            document.getElementById("wrapper").style.transform =
-                "translateY(0)";
-        }, 2000); // 2 seconds delay
-    });
+    import "../scripts/revealMascot.js";
 </script>
