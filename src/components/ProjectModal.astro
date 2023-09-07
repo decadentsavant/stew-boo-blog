@@ -1,0 +1,58 @@
+---
+---
+
+<div
+    id="project-modal"
+    tabindex="-1"
+    aria-hidden="true"
+    class={"hidden fixed inset-0 z-50 items-center justify-center p-4 overflow-x-hidden overflow-y-auto h-full max-h-full backdrop-blur-md"}
+>
+    <div class="relative w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relativ rounded-lg shadow bg-gray-700">
+            <!-- Modal header -->
+            <div
+                class="flex items-start justify-between p-5 border-b rounded-t border-gray-600"
+            >
+                <h3 class="text-xl font-semibold lg:text-2xl text-white">
+                    CARD TITLE
+                </h3>
+                <button
+                    type="button"
+                    class="close-button bg-transparent hover:bg-main-blue hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                >
+                    <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <p class="text-base leading-relaxed text-gray-400">CARD DESC</p>
+            </div>
+            <!-- Modal footer -->
+            <div
+                class="flex items-center p-6 space-x-2 border-t rounded border-gray-600"
+            >
+                <button
+                    type="button"
+                    class="close-button text-white bg-main-purple hover:bg-main-blue hover:text-black focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                >
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
