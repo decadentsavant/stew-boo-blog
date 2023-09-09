@@ -29,6 +29,7 @@ projectCards.forEach((card) => {
         // Show modal
         modal.classList.remove("hidden");
         modal.classList.add("flex");
+        document.body.style.overflow = "hidden"; // Disable body scroll
     });
 });
 
@@ -36,8 +37,13 @@ projectCards.forEach((card) => {
 const closeButtons = document.getElementsByClassName("close-button");
 for (let button of closeButtons) {
     button.addEventListener("click", () => {
+        // Reset modal scroll position
+        const modalBody = document.querySelector("#modal-body");
+        modalBody.scrollTop = 0;
+
         // Hide modal
         modal.classList.add("hidden");
         modal.classList.remove("flex");
+        document.body.style.overflow = "auto"; // Enable body scroll
     });
 }
