@@ -1,17 +1,43 @@
-    const projectCards = document.querySelectorAll(".project-card-class");
-    const modal = document.getElementById("project-modal");
-    const closeButtons = document.getElementsByClassName("close-button");
+const modal = document.getElementById("project-modal");
 
-    projectCards.forEach((card) => {
-        card.addEventListener("click", function () {
-            modal.classList.remove("hidden");
-            modal.classList.add("flex");
+const projectCards = document.querySelectorAll(".project-card-class");
+projectCards.forEach((card) => {
+    card.addEventListener("click", function () {
+        // Parse string to project object
+        const project = JSON.parse(
+            card.getAttribute("data-stringified-project")
+        );
+
+        // Set title in modal
+        document.getElementById("modal-title").textContent = project.title;
+
+        // Clear full description in modal
+        const modalBody = document.querySelector("#modal-body");
+        modalBody.innerHTML = "";
+
+        // Set full description in modal
+        project.fullDesc.forEach((descObj) => {
+            if (descObj.type === "text") {
+                const p = document.createElement("p");
+                p.textContent = descObj.content;
+                p.className = "text-base leading-relaxed text-gray-400";
+                modalBody.appendChild(p);
+            }
+            // ...handle other types when needed
         });
+
+        // Show modal
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
     });
+});
 
-    for (let button of closeButtons) {
-        button.addEventListener("click", () => {
-            modal.classList.add("hidden");
-            modal.classList.remove("flex");
-        });
-    };
+// close buttons logic
+const closeButtons = document.getElementsByClassName("close-button");
+for (let button of closeButtons) {
+    button.addEventListener("click", () => {
+        // Hide modal
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+    });
+}

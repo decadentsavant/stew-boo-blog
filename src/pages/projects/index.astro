@@ -12,12 +12,13 @@ const pageTitle = "Co's Projects";
     </h1>
     <div class="flex flex-col items-center gap-5 lg:grid lg:grid-cols-2">
         {
-            projects.map((project, index) => (
+            Object.keys(projects).map((key) => (
                 <ProjectsCard
-                    title={project.title}
-                    desc={project.shortDesc}
-                    img={project.img}
-                    alt={project.alt}
+                    project={JSON.stringify(projects[key])}
+                    title={projects[key].title}
+                    shortDesc={projects[key].shortDesc}
+                    img={projects[key].img}
+                    alt={projects[key].alt}
                 />
             ))
         }
@@ -26,5 +27,5 @@ const pageTitle = "Co's Projects";
 </BaseLayout>
 
 <script>
-    import "../../scripts/toggleProjectModal.js";
+import "../../scripts/toggleProjectModal"
 </script>
