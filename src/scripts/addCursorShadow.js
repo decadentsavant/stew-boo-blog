@@ -26,16 +26,16 @@
     document.addEventListener("mousemove", function (e) {
         prevMouseX = mouseX;
         prevMouseY = mouseY;
-        mouseX = e.pageX;
-        mouseY = e.pageY;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
 
         // Calculate the difference between the current and previous mouse positions
         const dx = mouseX - prevMouseX;
         const dy = mouseY - prevMouseY;
 
-        // Apply a scaling factor to the difference to create the overshoot
-        overshootX = dx * 0.5; // Adjust the scaling factor as needed
-        overshootY = dy * 0.5; // Adjust the scaling factor as needed
+        // Apply a scaling factor to the difference to create overshoot
+        overshootX = dx * 0.5; 
+        overshootY = dy * 0.5; 
     });
 
     setInterval(function () {
