@@ -7,7 +7,7 @@ export const projects = {
             {
                 type: "text",
                 content:
-                    "I didn't choose Arch to be part of the 'I use Arch, BTW' meme; I chose it as my personal playground for understanding Linux at the granule level. My mission was to demystify cloud servers and force myself to get my hands dirty installing packages, one dependency at a time.",
+                    "I didn't choose Arch to be part of the meme; I chose it as my personal playground for understanding Linux at the granule level. My mission was to demystify cloud servers and force myself to get my hands dirty installing packages, one dependency at a time.",
             },
             {
                 type: "text",
@@ -99,7 +99,12 @@ export const projects = {
             {
                 type: "text",
                 content:
-                    "Initiated to fulfill dual goals—learning new technologies and showcasing my portfolio—this project followed my completion of Meta's Front-End Developer Certificate in which I had learned React, Bootstrap, and Chakra. For this project, I chose to employ Astro for its SSR static site generator and Tailwind CSS due to its plethora of resources.",
+                    "I cut my teeth on web dev with Meta's Front-End Developer Certificate focusing on React, Bootstrap, and Chakra. Wanting to learn more and showcase a portfolio, Astro was chosen for its SSR static site generator and Tailwind CSS due to its popularity and abundance of resources.",
+            },
+            {
+                type: "text",
+                content:
+                    "Various JavaScript features were experimented with, such as handling DOM manipulation to create a custom cursor effect, utilizing `localStorage` for cursor persistence, and event listeners for interactivity. The user interface was also enhanced with a dynamic modal (you’re looking at it now), parsed from JSON-based project data, and used Astro's server-side features to manage the website layout components efficiently.",
             },
             {
                 type: "text",
