@@ -5,9 +5,8 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 const pageTitle = "Co's Blog";
 ---
 <BaseLayout pageTitle={pageTitle}>
-		<h2>Stew.Boo</h2>
-		<p>Welcome...to blog page.</p>
-		<p>Posts</p>
+		<p>Welcome to...a blog page.</p>
+		<p>At the time of this writing I have no plan for what I'm going to put down there. But I expect it'll be random. Here goes...
 		<ul>
 			{allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
 		</ul>
