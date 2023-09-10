@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My First Blog Post'
+title: 'Literally the only advice you should ever take'
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+description: 'First, Ignore Me...'
+author: 'Corey Stewart'
 image:
     url: 'https://docs.astro.build/assets/rays.webp' 
     alt: 'The full Astro logo.'
