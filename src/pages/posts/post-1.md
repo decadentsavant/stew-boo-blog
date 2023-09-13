@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Literally the only advice you should ever take'
 pubDate: 2022-07-01
-description: 'First, Ignore Me...'
+title: 'Language server is down'
+description: 'I feel dumb because its so simple'
 author: 'Corey Stewart'
 image:
     url: 'https://docs.astro.build/assets/rays.webp' 
     alt: 'The full Astro logo.'
-tags: ["astro", "blogging", "learning in public"]
+tags: ["tech"]
 ---
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 

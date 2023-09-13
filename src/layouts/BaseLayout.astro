@@ -3,7 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import RadialGlow from "../components/RadialGlow.astro";
-import { navLinks } from "../components/Navigation.astro"; 
+import { navLinks } from "../components/Navigation.astro";
 const { pageTitle } = Astro.props;
 // Determine the active link text by matching the current URL path
 let navTitle;
@@ -15,19 +15,26 @@ for (let link of navLinks) {
 }
 ---
 
-<html lang="en">
+<html lang="en" class="bg-main-bg-color text-text-whiteish"> 
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata:wght@400;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
         <title>{pageTitle}</title>
     </head>
     <body>
-        <div class="mx-auto p-4 w-full flex flex-col min-h-screen lg:max-w-screen-lg">
-            <Header navTitle={navTitle}/>
+        <div
+            class="mx-auto p-4 w-full flex flex-col min-h-screen lg:max-w-screen-lg"
+        >
+            <Header navTitle={navTitle} />
             <div class="flex-grow">
-                <h1 class="text-xl font-bold"></h1>
                 <slot />
             </div>
             <Footer />

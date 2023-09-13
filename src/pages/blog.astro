@@ -1,14 +1,59 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import BlogPost from "../components/BlogPost.astro"
-const allPosts = await Astro.glob('../pages/posts/*.md');
+import BlogPost from "../components/BlogPost.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const coachingPosts = allPosts.filter((post) =>
+    post.frontmatter.tags.includes("coaching")
+);
+const techPosts = allPosts.filter((post) =>
+    post.frontmatter.tags.includes("tech")
+);
+const randomPosts = allPosts.filter((post) =>
+    post.frontmatter.tags.includes("random")
+);
 const pageTitle = "Co's Blog";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-		<p>Welcome to...a blog page.</p>
-		<p>At the time of this writing I have no plan for what I'm going to put down there. But I expect it'll be random. Here goes...
-		<ul>
-			{allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-		</ul>
-	</body>
+    <h1 class="pt-8 pb-8 text-3xl text-center">
+        Welcome to a blog
+    </h1>
+    <p>I have a plan. Just kidding. I don't.</p>
+    <p>Where to start?</p>
+    <div class="flex flex-col gap-4">
+        <div>
+            <h2 class="text-lg text-text-cream">CONTENTS</h2>
+            <ul class="list-disc list-inside underline">
+                <li><a href="#tech-stuff">Tech Stuff</a></li>
+                <li><a href="#coaching">Coaching</a></li>
+                <li><a href="#practical-philosophy" class=""> Random</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2 id="practical-philosophy" class="text-lg text-text-cream">
+                TECH STUFF
+            </h2>
+            <ul>
+        {
+            techPosts.map((post) => (
+                <BlogPost url={post.url} title={post.frontmatter.title} />
+            ))
+        }
+    </ul>
+        </div>
+        <div>
+            <h2 id="tech-stuff" class="text-lg text-text-cream">COACHING</h2>
+        </div>
+        <div>
+            <h2 id="coaching" class="text-lg text-text-cream">RANDOM</h2>
+        </div>
+    </div>
+    <p class="mt-20">Keep this so you know what it looks like...but replace</p>
+    <ul>
+        {
+            allPosts.map((post) => (
+                <BlogPost url={post.url} title={post.frontmatter.title} />
+            ))
+        }
+    </ul>
 </BaseLayout>
