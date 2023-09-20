@@ -5,7 +5,7 @@ title: 'Stuck on Repeat'
 subtitle: 'The Fundamental Law of...Everything'
 author: 'Corey Stewart'
 image:
-    url: '../images/everythingRepeats.png' 
+    url: '/images/everythingRepeats.png' 
     alt: 'Men looking at papers on desk, clocks dangling over them'
     title: 'Everything Repeats'
 tags: ["personal-philosphy"]
