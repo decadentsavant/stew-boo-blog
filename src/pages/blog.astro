@@ -3,14 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const pageTitle = "Co's Blog";
 const allPosts = await Astro.glob("../pages/posts/*.md");
-const coachingPosts = allPosts.filter((post) =>
-    post.frontmatter.tags.includes("coaching")
-);
-const techPosts = allPosts.filter((post) =>
-    post.frontmatter.tags.includes("tech")
-);
-const randomPosts = allPosts.filter((post) =>
-    post.frontmatter.tags.includes("random")
+const personalPhilosophyPosts = allPosts.filter((post) =>
+    post.frontmatter.tags.includes("personal-philosphy")
 );
 ---
 
@@ -19,41 +13,25 @@ const randomPosts = allPosts.filter((post) =>
         Welcome to a blog
     </h1>
     <p>I have a plan. Just kidding. I don't.</p>
-    <p>Where to start?</p>
+    <p>Where do I...you...start?</p>
     <div class="flex flex-col gap-4">
         <div>
             <h2 class="text-lg text-text-cream">CONTENTS</h2>
             <ul class="list-disc list-inside underline">
-                <li><a href="#tech-stuff">Tech Stuff</a></li>
-                <li><a href="#coaching">Coaching</a></li>
-                <li><a href="#practical-philosophy" class=""> Random</a></li>
+                <li><a href="#personal-philosophy">Personal Philosophy</a></li>
             </ul>
         </div>
         <div>
-            <h2 id="practical-philosophy" class="text-lg text-text-cream">
-                TECH STUFF
+            <h2 id="personal-philosophy" class="text-lg text-text-cream">
+                PERSONAL PHILOSOPHY
             </h2>
             <ul>
         {
-            techPosts.map((post) => (
+            personalPhilosophyPosts.map((post) => (
                 <BlogPost url={post.url} title={post.frontmatter.title} />
             ))
         }
     </ul>
-        </div>
-        <div>
-            <h2 id="tech-stuff" class="text-lg text-text-cream">COACHING</h2>
-        </div>
-        <div>
-            <h2 id="coaching" class="text-lg text-text-cream">RANDOM</h2>
         </div>
     </div>
-    <p class="mt-20">Keep this so you know what it looks like...but replace</p>
-    <ul>
-        {
-            allPosts.map((post) => (
-                <BlogPost url={post.url} title={post.frontmatter.title} />
-            ))
-        }
-    </ul>
 </BaseLayout>
