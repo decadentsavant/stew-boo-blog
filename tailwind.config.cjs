@@ -41,7 +41,7 @@ module.exports = {
                 "main-blue": "rgb(89, 203, 230)",
                 "main-purple": "rgb(90, 118, 186)",
                 "text-cream": "rgb(194,178,150)",
-                "text-whiteish": "rgb(229,226,226)"
+                "text-whiteish": "rgb(239,234,234)"
             },
         },
     },
