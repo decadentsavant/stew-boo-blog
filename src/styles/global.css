@@ -34,3 +34,9 @@ h2,
 h3 {
     color: var(--text-cream);
 }
+
+.filter-for-blending {
+    filter: sepia(var(--sepia-value, 0.9)) saturate(1);
+    background-color: rgba(194,178,150,0.1);
+    mix-blend-mode: lighten;
+}
