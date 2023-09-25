@@ -11,7 +11,6 @@ image:
     sepiaVar: "1.0"
 tags: ["personal-philosphy"]
 ---
-<hr class="pb-8">
 
 5:20am: Coffee machine starts.<br>
 5:30am: Alarm, pants on; they're waiting by the bed.

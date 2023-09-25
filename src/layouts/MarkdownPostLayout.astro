@@ -36,6 +36,7 @@ const nextPost =
     <p class="text-sm text-center italic pb-8">
         {formatDate(frontmatter.pubDate)}
     </p>
+    <hr class="p-8">
     <slot />
     <div class="flex justify-around pt-8 text-text-cream pb-12">
         {nextPost && <a href={nextPost.url}>← {nextPost.frontmatter.title}</a>}
