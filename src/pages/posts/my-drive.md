@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-pubDate: 2023-09-20
+pubDate: 2023-09-2
 title: 'My Drive'
 subtitle: 'Get Stuck on Repeat'
 author: 'Corey Stewart'
@@ -12,10 +12,14 @@ image:
 tags: ["personal-philosphy"]
 ---
 
-My drive? Pursue compound interest.
+My drive? Compound interest.
 
 Gandhi is quoted (or misquoted) with "Whatever you do in life will be insignificant but it is very important that you do it anyway."
 
 Context matters, and he likely meant differently, but this is my takeaway because I'm a hammer looking for a nail:
 
-Everything you do, when examined in a vacuum, is meaningless; it's singular in nature and doesn't amount to much. But stack them. Move pebbles. Build mountains. That's significant.
+Everything you do, when examined in a vacuum, is meaningless; it's singular in nature and doesn't amount to much. 
+
+But it's important you do it anyway. 
+
+Stack pebbles. Build mountains. That's significant.
