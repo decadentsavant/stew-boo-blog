@@ -11,11 +11,11 @@ projectCards.forEach((card) => {
         // Set title in modal
         document.getElementById("modal-title").textContent = project.title;
 
-        // Clear full description in modal
+        // Clear full description in modal body
         const modalBody = document.querySelector("#modal-body");
         modalBody.innerHTML = "";
 
-        // Set full description in modal
+        // Set full description in modal body
         project.fullDesc.forEach((descObj) => {
             if (descObj.type === "text") {
                 const p = document.createElement("p");
@@ -23,7 +23,20 @@ projectCards.forEach((card) => {
                 p.className = "text-base leading-relaxed text-gray-400";
                 modalBody.appendChild(p);
             }
-            // ...handle other types when needed
+            // ...handle other types if/when needed
+        });
+
+        // Clear pills in modal footer
+        const modalFooter = document.querySelector("#modal-footer");
+        modalFooter.innerHTML = "";
+
+        // Set pill in modal footer
+        project.tech.forEach((item) => {
+            const pill = document.createElement("span");
+            pill.textContent = item;
+            pill.className =
+                "rounded-full bg-main-purple text-gray-300 text-center p-2";
+            modalFooter.appendChild(pill);
         });
 
         // Show modal
@@ -33,7 +46,7 @@ projectCards.forEach((card) => {
     });
 });
 
-// close buttons logic
+// Close button logic
 const closeButtons = document.getElementsByClassName("close-button");
 for (let button of closeButtons) {
     button.addEventListener("click", () => {
@@ -47,3 +60,13 @@ for (let button of closeButtons) {
         document.body.style.overflow = "auto"; // Enable body scroll
     });
 }
+
+// Close modal on click outside modal
+modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.body.style.overflow = "auto"; // Enable body scroll
+    }
+});
+
