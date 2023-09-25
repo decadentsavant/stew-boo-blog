@@ -6,24 +6,24 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
 // const personalPhilosophyPosts = allPosts.filter((post) =>
 //     post.frontmatter.tags.includes("personal-philosphy")
 // );
-
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h1 class="pt-8 pb-8 text-3xl text-center">
-        Welcome to a blog
-    </h1>
+    <h1 class="pt-8 pb-8 text-3xl text-center">Welcome to a blog</h1>
     <p>I have a plan. Just kidding. I don't.</p>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col">
         <div>
             <h2 class="text-lg text-text-cream">CONTENTS</h2>
-            <ul class="list-disc list-inside underline underline-offset-2">
-        {
-            allPosts.map((post) => (
-                <BlogPost url={post.url} title={post.frontmatter.title} />
-            ))
-        }
-    </ul>
+            <ul class="underline underline-offset-2">
+                {
+                    allPosts.map((post) => (
+                        <BlogPost
+                            url={post.url}
+                            title={post.frontmatter.title}
+                        />
+                    ))
+                }
+            </ul>
         </div>
     </div>
 </BaseLayout>
