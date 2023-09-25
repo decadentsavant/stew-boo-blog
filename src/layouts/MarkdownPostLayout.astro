@@ -36,14 +36,26 @@ const nextPost =
     <p class="text-sm text-center italic pb-8">
         {formatDate(frontmatter.pubDate)}
     </p>
-    <hr class="p-8">
+    <hr class="p-8" />
     <slot />
     <div class="flex justify-around pt-8 text-text-cream pb-12">
-        {nextPost && <a href={nextPost.url}>← {nextPost.frontmatter.title}</a>}
         {
             previousPost && (
                 <a href={previousPost.url}>
-                     {previousPost.frontmatter.title} → 
+                    ←{" "}
+                    <span class="hidden sm:inline">
+                        {previousPost.frontmatter.title}
+                    </span>
+                </a>
+            )
+        }
+        {
+            nextPost && (
+                <a href={nextPost.url}>
+                    <span class="hidden sm:inline">
+                        {nextPost.frontmatter.title}
+                    </span>
+                    {" "}→
                 </a>
             )
         }
