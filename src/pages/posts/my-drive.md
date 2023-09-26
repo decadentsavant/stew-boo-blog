@@ -22,4 +22,4 @@ Everything you do, when examined in a vacuum, is meaningless; it's singular in n
 
 But it's important you do it anyway. 
 
-Stack pebbles. Build mountains. That's significant.
+Stack pebbles. Build mountains. Repeat. That's significant.
