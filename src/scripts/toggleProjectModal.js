@@ -11,6 +11,25 @@ projectCards.forEach((card) => {
         // Set title in modal
         document.getElementById("modal-title").textContent = project.title;
 
+        
+        // Conditionally show GitHub icon
+        const githubLink = document.getElementById("github-link");
+        if (project.gitHub) {
+            githubLink.href = project.gitHub;
+            githubLink.classList.remove("hidden");
+        } else {
+            githubLink.classList.add("hidden");
+        }
+        
+        // Conditionally show second GitHub icon
+        const githubLink2 = document.getElementById("github-link2");
+        if (project.gitHub2) {
+            githubLink2.href = project.gitHub2;
+            githubLink2.classList.remove("hidden");
+        } else {
+            githubLink2.classList.add("hidden");
+        }
+
         // Clear full description in modal body
         const modalBody = document.querySelector("#modal-body");
         modalBody.innerHTML = "";
@@ -69,4 +88,3 @@ modal.addEventListener("click", (event) => {
         document.body.style.overflow = "auto"; // Enable body scroll
     }
 });
-
