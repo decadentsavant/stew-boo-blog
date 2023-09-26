@@ -171,6 +171,6 @@ export const projects = {
         img: "/images/boo_icon.png",
         alt: "logo of ghost for stew.boo",
         gitHub: "https://github.com/decadentsavant/stew-boo-blog",
-        gitHub2: "https://google.com",
+        gitHub2: "https://github.com/decadentsavant/GitHubWebhookServer",
     },
 };
