@@ -9,7 +9,12 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h1 class="pt-8 pb-8 text-3xl text-center">Welcome to a blog</h1>
+    <h1 class="my-4 text-3xl text-center">Welcome to a blog</h1>
+    <img
+        src="/images/blog-main-image.png"
+        class="object-cover max-h-72 filter-for-blending mx-auto mb-4"
+        style="--sepia-value: 0.4;"
+    />
     <p>I have a plan. Just kidding. I don't.</p>
     <div class="flex flex-col">
         <div>
