@@ -1,7 +1,7 @@
 #
 copush.sh
 
-# images...be sure to manually move
+# images...move with bash script
 public/images/
 
 # build output
