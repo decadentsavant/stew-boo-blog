@@ -3,9 +3,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const pageTitle = "Co's Blog";
 const allPosts = await Astro.glob("../pages/posts/*.md");
-// const personalPhilosophyPosts = allPosts.filter((post) =>
-//     post.frontmatter.tags.includes("personal-philosphy")
-// );
 ---
 
 <BaseLayout pageTitle={pageTitle}>
