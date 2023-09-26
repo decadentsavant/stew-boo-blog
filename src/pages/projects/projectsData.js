@@ -47,7 +47,7 @@ export const projects = {
             {
                 type: "text",
                 content:
-                    "After capturing the Data URI, the server-side code decodes it to extract the actual CSV data. This data is first serialized and persisted in a PostgreSQL database, and then calculations are performed to provide the desired insights. The final step is writing the data to a .csv file and sending it to the client each day via a custom mail server.",
+                    "After capturing the Data URI, the server-side code decodes it to extract the actual CSV data. This data is first serialized and persisted in a PostgreSQL database (project on GitHub). In a subsequent step (not on GitHub), proprietary calculations are performed to provide the desired insights for the client. The final step is writing the data to a .csv file and sending it to the client each day via a custom mail server.",
             },
             {
                 type: "text",
