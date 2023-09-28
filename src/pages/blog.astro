@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const pageTitle = "Corey Stewart's Blog";
+const image = "/images/main_blog_image.png"
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const metaTags = [
     { property: "og:type", content: "website" },
@@ -10,13 +11,14 @@ const metaTags = [
         content:
             "Contents of Corey Stewart's blog"
     },
+    { property: "og:image", content: {image}  },
 ];
 ---
 
 <BaseLayout pageTitle={pageTitle} metaTags={metaTags}>
     <h1 class="my-4 text-3xl text-center">Welcome to a blog</h1>
     <img
-        src="/images/blog_main_image.png"
+        src={image}
         class="object-cover max-h-72 filter-for-blending mx-auto mb-4"
         style="--sepia-value: 0.4;"
     />

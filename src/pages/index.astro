@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Welcome to Stew.Boo!";
+const image = "/images/madeira.jpg"
 const metaTags = [
     { property: "og:type", content: "website" },
     {
@@ -8,6 +9,7 @@ const metaTags = [
         content:
             "Corey Stewart's personal website",
     },
+    { property: "og:image", content: {image} },
 ];
 ---
 
@@ -23,7 +25,7 @@ const metaTags = [
             <p class="text-center leading-none">
                 A digital playground where the monkey bars lead nowhere specific. 
             </p>
-            <img src="/images/madeira.jpg" class="h-80 mx-auto object-cover" style="object-position: 95% 20%;"/>
+            <img src={image} class="h-80 mx-auto object-cover" style="object-position: 95% 20%;"/>
         </div>
     </div>
 </BaseLayout>

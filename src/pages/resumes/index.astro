@@ -1,6 +1,16 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const pageTitle = "Corey Stewart Resumes";
+const metaTags = [
+    { property: "og:type", content: "article" },
+    { property: "article:author", content: "https://stew.boo/about" },
+    { property: "article:section", content: "Resumes" },
+    {
+        property: "og:description",
+        content: "Resumes",
+    },
+    { property: "og:image", content: "/images/headshot_small.png" },
+];
 ---
 
 <BaseLayout pageTitle={pageTitle}>

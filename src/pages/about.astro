@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import headshot from "/images/headshot_small.png";
-import lobsters from "/images/lobsters.png";
 
 const pageTitle = "About Corey Stewart";
+const image = "/images/headshot_small.png"
+const lobsters = "/images/lobsters.png";
 const metaTags = [
     { property: "og:type", content: "profile" },
     { property: "profile:first_name", content: "Corey" },
@@ -15,13 +15,14 @@ const metaTags = [
         content:
             "Learn more about Corey Stewart, his experiences, skills, and interests.",
     },
+    { property: "og:image", content: {image}  },
 ];
 ---
 
 <BaseLayout pageTitle={pageTitle} metaTags={metaTags}>
     <h1 class="pt-8 pb-8 text-center text-3xl">Corey Stewart</h1>
     <img
-        src={headshot}
+        src={image}
         alt="Description of Image 1"
         class="w-full sm:w-2/5 sm:float-left sm:mr-4"
     />
