@@ -2,7 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About Corey Stewart";
-const image = "https://stew.boo./images/headshot_small.png"
+const domain = "https://stew.boo";
+const image = "/images/headshot_small.png";
 const lobsters = "/images/lobsters.png";
 const metaTags = [
     { property: "og:type", content: "profile" },
@@ -15,7 +16,7 @@ const metaTags = [
         content:
             "Learn more about Corey Stewart, his experiences, skills, and interests.",
     },
-    { property: "og:image", content: image },
+    { property: "og:image", content: `${domain}${image}` },
 ];
 ---
 
