@@ -11,14 +11,14 @@ const metaTags = [
         content:
             "Contents of Corey Stewart's blog"
     },
-    { property: "og:image", content: "https://stew.boo/images/main_blog_image.png" },
+    { property: "og:image", content: image },
 ];
 ---
 
 <BaseLayout pageTitle={pageTitle} metaTags={metaTags}>
     <h1 class="my-4 text-3xl text-center">Welcome to a blog</h1>
     <img
-        src="/images/main_blog_image.png"
+        src={image}
         class="object-cover max-h-72 filter-for-blending mx-auto mb-4"
         style="--sepia-value: 0.4;"
     />
