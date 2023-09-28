@@ -51,6 +51,16 @@ for (let link of navLinks) {
         <meta property="og:url" content={fullUrl} />
         <meta property="og:updated_time" content={updatedTimestamp} />
         {metaTags.map((tag) => <meta {...tag} />)}
+
+        <!-- Twitter Card tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@decadentsavant" />
+        <meta name="twitter:title" content="Stew.boo" />
+        <meta
+            name="twitter:description"
+            content="Corey Stewart's personal site"
+        />
+        <meta name="twitter:image" content="https://stew.boo/images/madeira.jpg" />
     </head>
 
     <body>
