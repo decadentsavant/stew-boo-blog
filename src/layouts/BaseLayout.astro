@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import RadialGlow from "../components/RadialGlow.astro";
 import { navLinks } from "../components/Navigation.astro";
-const { pageTitle } = Astro.props;
+const { pageTitle, ogUrl, ogType, ogDescription, ogImage, ogImageAlt } = Astro.props;
 // Determine the active link text by matching the current URL path
 let navTitle;
 for (let link of navLinks) {
@@ -15,7 +15,7 @@ for (let link of navLinks) {
 }
 ---
 
-<html lang="en" class="bg-main-bg-color text-text-whiteish"> 
+<html lang="en" class="bg-main-bg-color text-text-whiteish">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
@@ -28,6 +28,23 @@ for (let link of navLinks) {
             rel="stylesheet"
         />
         <title>{pageTitle}</title>
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:url" content="https://stew.boo/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Welcome to Stew.Boo!" />
+        <meta
+            property="og:description"
+            content="Your brief description of the content goes here."
+        />
+        <meta
+            property="og:image"
+            content="https://stew.boo/images/madeira.jpg"
+        />
+        <meta
+            property="og:image:alt"
+            content="A descriptive text about the image."
+        />
+        <meta property="og:updated_time" content="1695845423" />
     </head>
     <body>
         <div
