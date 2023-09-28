@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-pubDate: 2023-09-2
+pubDate: "2023-09-02"
 title: 'My Drive'
 subtitle: 'Get Stuck on Repeat'
 author: 'Corey Stewart'

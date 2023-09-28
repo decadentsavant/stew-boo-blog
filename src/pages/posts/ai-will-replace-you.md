@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-pubDate: 2023-09-9
+pubDate: "2023-09-09"
 title: "Worried AI Will Replace You? Good. You're Sane."
 subtitle: "Adapt or don't."
 author: 'Corey Stewart'

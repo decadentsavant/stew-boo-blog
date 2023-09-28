@@ -3,10 +3,19 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectsCard from "../../components/ProjectsCard.astro";
 import ProjectModal from "../../components/ProjectModal.astro";
 import { projects } from "./projectsData.js";
-const pageTitle = "Co's Projects";
+const pageTitle = "Tech Projects";
+const metaTags = [
+    { property: "og:type", content: "website" },
+    {
+        property: "og:description",
+        content:
+            "Corey Stewart's technical projects",
+    },
+    { property: "og:image", content: "/images/baseball_cards.png" },
+];
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} metaTags={metaTags}>
     <h1 class="pt-8 pb-8 text-3xl text-center">
         Select Projects
     </h1>

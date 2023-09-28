@@ -4,8 +4,11 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import RadialGlow from "../components/RadialGlow.astro";
 import { navLinks } from "../components/Navigation.astro";
-const { pageTitle, ogUrl, ogType, ogDescription, ogImage, ogImageAlt } = Astro.props;
-// Determine the active link text by matching the current URL path
+
+const { pageTitle, metaTags = [] } = Astro.props;
+const updatedTimestamp = new Date().toISOString();
+const fullUrl = `${Astro.url.origin}${Astro.url.pathname}`;
+// Determine the active link text by matching current URL path
 let navTitle;
 for (let link of navLinks) {
     if (Astro.url.pathname === link.url) {
@@ -28,24 +31,14 @@ for (let link of navLinks) {
             rel="stylesheet"
         />
         <title>{pageTitle}</title>
+
         <!-- Open Graph Meta Tags -->
-        <meta property="og:url" content="https://stew.boo/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Welcome to Stew.Boo!" />
-        <meta
-            property="og:description"
-            content="Your brief description of the content goes here."
-        />
-        <meta
-            property="og:image"
-            content="https://stew.boo/images/madeira.jpg"
-        />
-        <meta
-            property="og:image:alt"
-            content="A descriptive text about the image."
-        />
-        <meta property="og:updated_time" content="1695845423" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:url" content={fullUrl} />
+        <meta property="og:updated_time" content={updatedTimestamp} />
+        {metaTags.map((tag) => <meta {...tag} />)}
     </head>
+
     <body>
         <div
             class="mx-auto p-4 w-full flex flex-col min-h-screen lg:max-w-screen-lg"

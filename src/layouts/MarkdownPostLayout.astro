@@ -1,14 +1,16 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
-function formatDate(dateString) {
-    const date = new Date(dateString);
+function formatDate(isoString) {
+    const date = new Date(isoString);
     return date.toLocaleDateString("en-US", {
         month: "long",
         day: "numeric",
         year: "numeric",
     });
 }
+
+// Posts Info
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const currentPostFile = Astro.props.file;
 const currentIndex = allPosts.findIndex(
@@ -17,9 +19,25 @@ const currentIndex = allPosts.findIndex(
 const previousPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
 const nextPost =
     currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+
+// OpenGraph tags
+const metaTags = [
+    { property: "og:type", content: "article" },
+    { property: "article:author", content: "https://stew.boo/about" },
+    { property: "article:section", content: "Blog" },
+    { property: "article:published_time", content: frontmatter.pubDate },
+    {
+        property: "og:description",
+        content: frontmatter.subtitle,
+    },
+    { property: "og:image", content: frontmatter.image.url },
+];
+frontmatter.tags.forEach((tag) => {
+    metaTags.push({ property: "article:tag", content: tag });
+});
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title} metaTags={metaTags}>
     <div class="text-center">
         <h1 class="text-3xl pb-2">{frontmatter.title}</h1>
         <p>{frontmatter.subtitle}</p>
@@ -54,8 +72,8 @@ const nextPost =
                 <a href={nextPost.url}>
                     <span class="hidden sm:inline">
                         {nextPost.frontmatter.title}
-                    </span>
-                    {" "}→
+                    </span>{" "}
+                    →
                 </a>
             )
         }

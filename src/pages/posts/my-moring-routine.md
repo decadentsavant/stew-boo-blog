@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-pubDate: 2023-09-1
+pubDate: "2023-09-01"
 title: 'My Morning Routine'
 subtitle: 'KISS'
 author: 'Corey Stewart'

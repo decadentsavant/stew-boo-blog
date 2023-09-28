@@ -4,9 +4,21 @@ import headshot from "/images/headshot_small.png";
 import lobsters from "/images/lobsters.png";
 
 const pageTitle = "About Corey Stewart";
+const metaTags = [
+    { property: "og:type", content: "profile" },
+    { property: "profile:first_name", content: "Corey" },
+    { property: "profile:last_name", content: "Stewart" },
+    { property: "profile:username", content: "@decadentsavant" },
+    { property: "profile:gender", content: "male" },
+    {
+        property: "og:description",
+        content:
+            "Learn more about Corey Stewart, his experiences, skills, and interests.",
+    },
+];
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} metaTags={metaTags}>
     <h1 class="pt-8 pb-8 text-center text-3xl">Corey Stewart</h1>
     <img
         src={headshot}
