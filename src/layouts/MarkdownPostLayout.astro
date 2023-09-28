@@ -30,7 +30,7 @@ const metaTags = [
         property: "og:description",
         content: frontmatter.subtitle,
     },
-    { property: "og:image", content: frontmatter.image.url },
+    { property: "og:image", content: `https://stew.boo${frontmatter.image.url}` },
 ];
 frontmatter.tags.forEach((tag) => {
     metaTags.push({ property: "article:tag", content: tag });

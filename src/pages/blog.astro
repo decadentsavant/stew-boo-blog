@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const pageTitle = "Corey Stewart's Blog";
-const image = "/images/main_blog_image.png"
+const image = "https://stew.boo/images/main_blog_image.png"
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const metaTags = [
     { property: "og:type", content: "website" },
