@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const pageTitle = "Corey Stewart Resumes";
+const metaTags = [
+    { property: "og:type", content: "article" },
+    { property: "article:author", content: "https://stew.boo/about" },
+    { property: "article:section", content: "Resumes" },
+    {
+        property: "og:description",
+        content: "Resumes",
+    },
+    {
+        property: "og:image",
+        content: "https://stew.boo/images/headshot_small.png",
+    },
+];
+---
+
+<BaseLayout pageTitle={pageTitle} metaTags={metaTags}>
+    <h1 class="pt-8 pb-8 text-center text-3xl">Corey Stewart's Resume</h1>
+    <a href="/CoreyStewartTech.pdf" class="flex flex-col items-center" download>
+        <div
+            class="m-2 inline-block transition-transform duration-300 ease-in-out transform hover:scale-110 origin-bottom"
+        >
+            <img
+                src="/images/resumeTech.png"
+                class="h-80 mx-auto filter contrast-75"
+                alt="resume"
+            />
+        </div>
+        <p class="pb-2 text-sm">
+            Download Resume <br />
+        </p>
+    </a>
+
+    <p class="pt-12 italic">
+        "A human being should be able to change a diaper, plan an invasion,
+        butcher a hog, conn a ship, design a building, write a sonnet, balance
+        accounts, build a wall, set a bone, comfort the dying, take orders, give
+        orders, cooperate, act alone, solve equations, analyze a new problem,
+        pitch manure, program a computer, cook a tasty meal, fight efficiently,
+        die gallantly. Specialization is for insects." – Robert A. Heinlein
+    </p>
+</BaseLayout>
