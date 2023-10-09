@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2023-10-09"
-title: "The 'Average of 5 People' Myth ."
+title: "The 'Average of 5 People' Myth"
 subtitle: "Mindset Matters"
 author: 'Corey Stewart'
 image:
-    url: '/images/ai_fear.png' 
-    alt: 'Men looking at papers on desk, clocks dangling over them'
-    title: 'Your move'
+    url: '/images/peoples_thoughts.png' 
+    alt: "People's thoughts as balloons"
+    title: 'Predominant Thoughts'
     sepiaVar: "0.5"
 tags: ["personal-philosphy"]
 ---
@@ -23,4 +23,4 @@ View strangers as connections waiting to be made? You'll be a hub in a network o
 
 You can't game this system by reverse-engineering it, placing yourself amidst prodigies and hoping their luster rubs off. It's not osmosis; it's alignment.
 
-Stop outsourcing your outcomes in life to others. Your thoughts are the architects of your destiny.
+Stop outsourcing your outcomes in life to others. Focus on your predominant thoughts.
